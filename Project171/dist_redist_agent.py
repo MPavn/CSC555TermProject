@@ -246,6 +246,11 @@ class DistRedistAgent(OneShotSyncAgent):
         #Price_multipler: multiples the base price according to different to different seasons
         # Threshold : When an offer is made the threshold will be the minimum amount of resources needed
         # random_p : Randmoness of distributing resources
+
+        # winter: P) Higher prices because of reduced supply T) able to accept lower prices P) Lower randomness
+        # spring: P) lower price multiplier due to increased demand. T) higher thresholds due to abundant resources P) high randomness b/c of new surplus
+        # summer P) Moderate price increase, due to travel T) Moderate Threshold
+        # Autumn: P)  Stable prices T) Resources become more scarce P) Unpredictable shortages due to weather
         seasonal_factors = {
             "winter": {"price_multiplier": 1.2, "threshold": 10, "random_p": 0.3},
             "spring": {"price_multiplier": 0.9, "threshold": 15, "random_p": 0.5},
